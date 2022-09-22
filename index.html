@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="serialization.js"></script>
+  </head>
+  <body>
+
+    <div class="test-title">Тестовое задание</div>
+    <div class="vertical-gap"></div>
+    <div class="test-subtitle">
+      Задача
+    </div>
+    <div class="test-description">
+      Есть множество (массив, где порядок не важен) целых чисел (от 1 до 1000). Количество чисел - до 200.
+      Необходимо написать функцию сериализации/десериализации в строку.
+      Цель задачи - сделать строчку максимально короткой.
+    </div>
+    <div class="vertical-gap"></div>
+    <div class="test-subtitle">
+      Решение
+    </div>
+    <div class="test-description">
+      Число сериализируется последовательностью из одного или двух символов [d1]d0,
+      где d1: 0..27 ('a'..'z', '-', '+'),
+          d2: 0..35 ('A'..'Z', '0'..'9').
+      Максимальное значение целого d1*d0 - 1 = 28*36 - 1 = 1007.
+      Таблицы кодировки d1 и d0 не пересекающиеся, поэтому при сериализации последовательности
+      целых чисел отсутствует необходимость в символе-разделителе.
+    </div>
+    <div class="vertical-gap"></div>
+    <div class="test-subsubtitle">
+      Сериализация
+    </div>
+    <div class="vertical-gap"></div>
+    <input type="text" id="serializeSrcEdit">
+    <div class="vertical-gap"></div>
+    <div>
+      Результат:
+    </div>
+    <input type="text" id="serializeResultEdit" disabled>
+    <div class="vertical-gap"></div>
+    <div class="buttons-pane">
+      <button id="serializeButton" onclick="serialize()">Сериализировать</button>
+    </div>
+    <div class="vertical-gap"></div>
+    <div class="vertical-gap"></div>
+    <div class="test-subsubtitle">
+      Десериализация
+    </div>
+    <div class="vertical-gap"></div>
+    <input type="text" id="deserializeSrcEdit">
+    <div class="vertical-gap"></div>
+    <div>
+      Результат:
+    </div>
+    <input type="text" id="deserializeResultEdit" disabled>
+    <div class="vertical-gap"></div>
+    <div class="buttons-pane">
+      <button id="deserializeButton" onclick="deserialize()">Десериализировать</button>
+    </div>
+  </body>
+</html>
