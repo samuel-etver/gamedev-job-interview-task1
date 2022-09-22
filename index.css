@@ -1,0 +1,43 @@
+body {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+
+.vertical-gap {
+    height: 10px;
+    min-height: 10px;
+    max-height: 10px;
+}
+
+
+.buttons-pane {
+    display-flex;
+    flex-direction: row;
+}
+
+
+.test-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+
+.test-subtitle {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+
+.test-subsubtitle {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+
+.test-description {
+    text-indent: 40px;
+}
